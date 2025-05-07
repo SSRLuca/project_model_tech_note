@@ -52,6 +52,27 @@
 相當於打開映射的網頁，比如https://Liff_Redirect.html，該網頁可以透過liff既有的line函式庫取得資料
 
 
+4.關掉LIFF視窗，使用liff.closeWindow()
+
+   if (string.IsNullOrEmpty(num))
+        {
+            string script = @"
+        alert('沒有課程編號');
+        if (typeof liff !== 'undefined') {
+            liff.closeWindow();
+        } else {
+            window.close();
+        }
+    ";
+            ScriptManager.RegisterStartupScript(this, typeof(string), "", script, true);
+            return;
+        }
+
+
+
+5.一般來說要使用 window.close()是針對js開啟的視窗，比如window.open()，若使用的是liff，
+那只能使用liff.closeWindow()來關視窗
+
 
 
 

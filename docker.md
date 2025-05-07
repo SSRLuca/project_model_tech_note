@@ -16,8 +16,12 @@ docker build -t webapi.api1:v1 .
 
 建立HTTP、HTTPS:docker run -d --name webapi-authorization -p 8001:80 -p 8002:443 webapi.authorization:v1
 
-
-
+## 更新程式碼步驟
+先進去專案資料夾，下git pull(輸入帳號和github的token)
+下docker stop 容器名稱 (成功會出現容器名稱)
+下docker rm 容器名稱(成功會出現容器名稱)
+下docker build -t webapi.api1:v1 . (要先進去有dockerfile的資料夾裡面，位置會和dockerfile同層)
+下docker run -d --name webapi.api1 -p 8001:80 -p 8002:443 webapi.api1:v1(成功會有CONTAINER ID)
 
 
 ##	Note
@@ -26,4 +30,6 @@ docker build -t webapi.api1:v1 .
 docker images 
 ### 3.list container(查看現在容器)
 docker ps
+
+
 
