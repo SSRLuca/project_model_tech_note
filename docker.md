@@ -1,5 +1,7 @@
 ## 📄 docker 紀錄
 
+## 建立docker
+
 ### 1.連線
 ssh michliu@100.107.110.45
 
@@ -10,24 +12,24 @@ git pull git的路徑
 docker build -t webapi.api1:v1 .
 
 ### 4.啟動 docker
-建立HTTP:docker run -d --name webapi-authorization -p 8001:80 WebAPI.API1:v1
+1.建立HTTP:docker run -d --name webapi-authorization -p 8001:80 WebAPI.API1:v1
 
-建立HTTPS:docker run -d --name webapi-authorization -p 8002:443 WebAPI.API1:v1
+2.建立HTTPS:docker run -d --name webapi-authorization -p 8002:443 WebAPI.API1:v1
 
-建立HTTP、HTTPS:docker run -d --name webapi-authorization -p 8001:80 -p 8002:443 webapi.authorization:v1
+3.建立HTTP、HTTPS:docker run -d --name webapi-authorization -p 8001:80 -p 8002:443 webapi.authorization:v1
 
-## 更新程式碼
 
-### 步驟
+## 更新程式碼步驟
+
 先進去專案資料夾，下git pull(輸入帳號和github的token)
 
-下docker stop 容器名稱 (成功會出現容器名稱)
+1.docker stop 容器名稱 (成功會出現容器名稱)
 
-下docker rm 容器名稱(成功會出現容器名稱)
+2.docker rm 容器名稱(成功會出現容器名稱)
 
-下docker build -t webapi.api1:v1 . (要先進去有dockerfile的資料夾裡面，位置會和dockerfile同層)
+3.docker build -t webapi.api1:v1 . (要先進去有dockerfile的資料夾裡面，位置會和dockerfile同層)
 
-下docker run -d --name webapi.api1 -p 8001:80 -p 8002:443 webapi.api1:v1(成功會有CONTAINER ID)
+4.docker run -d --name webapi.api1 -p 8001:80 -p 8002:443 webapi.api1:v1(成功會有CONTAINER ID)
 
 
 ##	Note
