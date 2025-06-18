@@ -37,4 +37,5 @@ docker images
 docker ps
 
 
-
+##	其他
+1.打開檔案: docker exec a10e5d84c8fd cat /app/appLog/log.txt
