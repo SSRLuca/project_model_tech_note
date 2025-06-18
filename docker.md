@@ -38,4 +38,4 @@ docker ps
 
 
 ##	其他
-1.打開檔案: docker exec a10e5d84c8fd cat /app/appLog/log.txt
+1.打開檔案: docker exec 容器ID cat /app/appLog/log.txt
